@@ -1,0 +1,6 @@
+title: "Proyecto Scrum"
+source: 
+    - ./Controlador
+    - ./Vista
+    - ./Modelo
+destination: ./doc
