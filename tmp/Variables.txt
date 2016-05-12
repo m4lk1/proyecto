@@ -1,0 +1,30 @@
+Aqui se iran colocando las variables su localizacion y lo que realizan:
+
+        VISTA
+
+id="emai" /index.php                -> Campo de entrada de email para el inicio de sesion.
+id="passwd" /index.php              -> Campo de entrada de contraseña para el inicio de sesion.
+id="conectar" /index.php            -> Boton de conectar en la pagina de inicio.
+id="email" /Vista/Registro.php      -> Campo de entrade de email en la pagina de registro.
+id="passwd" /Vista/Registro.php     -> Campo de entrada de contraseña en la pagina de registro.
+id="nombre" /Vista/Registro.php     -> Campo de entrada de nombre en la pagina de registro.
+id="apellido" /Vista/Registro.php   -> Campo de entrada de apellidos en la pagina de registro (opcional).
+id="nick" /Vista/Registro.php       -> Campo de entrada del nick del usuario en la pagina de registro (unico).
+id="registrar" /Vista/Registro.php  -> Boton registrar en la pagina de registro (evidentemente).
+id="proyectos" /Vista/Proyectos.php -> Espacio reservado para la lectura de proyectos de la base de datos (ul).
+id="anadir" /Vista/Proyectos.php    -> Boton para crear proyectos en la pagina de proyectos.
+id="anadiHU" /Vista/Tabla.php       -> Boton para añadir una nueva historia de husuario al proyecto (por defecto el estado es 0).
+id="anadirS" /Vista/Tabla.php       -> Boton pra añadir un nuevo sprint al proyecto.
+id="btnVerMas" /Vista/Tabla.php     -> Boton para ver los detalles de una tarea.
+id="nombreHu" /Vista/Tabla.php      -> Campo de entrada del nombre de la historia de usuario en el proyecto
+id="valor" /Vista/Tabla.php         -> Campo de entrada del valor de la historia de usuario.
+id="info" /Vista/Tabla.php          -> Campo de ingreso de los datos adicionales de la tarea.
+id="atras" /Vista/Tabla.php         -> Devuelve al usuario a su pagina de proyectos.
+id="nombreSprint" /Vista/Tabla.php  -> Campo de entrada del nombre del sprint en l proyecto.
+id="fInicio" /Vista/Tabla.php       -> Fecha de inicio del sprint.
+id="fFin" /Vista/Tabla.php          -> Fecha de fin del sprint.
+
+        MODELO
+
+
+        CONTROLADOR
