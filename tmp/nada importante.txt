@@ -1,0 +1,27 @@
+Este archivo solo contiene elemento usados para trasladarlos de un archivo a otro
+
+
+Patron de contraseña pra comprobar si esta dentro de lo aceptable
+[A-Za-z0-9]{4,20}
+
+Necesario un prottipo de la caja que va en las tareas
+
+<div class="cajamovil" id="">          
+    <h4>nombre: asd</h4>
+    <p>valor 5</p>
+    <div id="detalles" >Los detalles de la tarea</div>
+    <button id="btnVerMas" class="btn btn-ms btn-primary">ver más</button>
+</div>
+
+paquete json de la insercion
+
+
+{
+    "operacion" : "insercion",
+    "tabla" : "",
+    "objeto" : {
+        "nombre" : "nombre de la HU",
+        "descripcion" : "Descripcion de la HU",
+        "valor" : "100-1000"
+    }
+}
