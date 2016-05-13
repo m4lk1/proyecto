@@ -5,13 +5,13 @@ var valor;
 var conexion = { //metodos de conexion, envio y recepcion de datos al servidor
     http_request : false,
     siObtengoResultado : function (callback) {
-        this.callback=callback;
+        this.callback = callback;
     },
     respondeBD : function (objeto) {
         conexion.callback(objeto);
     },
     enviarDatos : function (paquete) {
-        var url = "http://localhost/Controlador/Pruebas.php";//falta saber como se llama el controlador
+        var url = "http://localhost/proyecto2/Controlador/anadirHU.php";//falta saber como se llama el controlador
         this.envio(url, paquete);
     },
     envio : function (url, paquete) {
@@ -43,7 +43,7 @@ var conexion = { //metodos de conexion, envio y recepcion de datos al servidor
     alertContents : function () {
         if (conexion.http_request.readyState == 4) {
             if (conexion.http_request.status == 200) {
-                datos.respondeBD(JSON.parse(conexion.http_request.responseText));
+                conexion.respondeBD(JSON.parse(conexion.http_request.responseText));
             } else {
                 alert('Hubo problemas con la petición.');
             }
@@ -55,11 +55,11 @@ var datos = { //metodos de geston de paquetes y datos de la pagina
         nombre = document.getElementById("nombreHu").value;
         descripcion = document.getElementById("info").value;
         valor = document.getElementById("valor").value;
-        if(nombre.length!=0 && valor!=0){
+        if (nombre.length != 0 && valor != 0 ){
             conexion.siObtengoResultado(vista.mostrar)
             var paqueteDeEnvio = {
                 operacion : "insert",
-                tabla : "tareas",
+                tabla : "Tareas",
                 objeto : {
                     nombre : nombre,
                     descripcion : descripcion,
@@ -67,7 +67,7 @@ var datos = { //metodos de geston de paquetes y datos de la pagina
                 }
             };
             conexion.enviarDatos(paqueteDeEnvio);
-        }else{
+        } else {
             var error = document.getElementById("error");
             var texto = document.createElement("p");
             texto.innerHTML = "Hay campos vacios en el formulario";
@@ -84,8 +84,8 @@ var datos = { //metodos de geston de paquetes y datos de la pagina
 };
 var vista = { //metodos para mostrar los datos en la pagina
     mostrar : function (datos) {
-        console.log("pintando");
         var nombre = document.createElement("h4")
+        var info = document.createElement("p");
         var descripcion = document.createElement("div");
         var valor = document.createElement("p");
         var btninfo = document.createElement("button");
@@ -97,7 +97,8 @@ var vista = { //metodos para mostrar los datos en la pagina
         btninfo.innerHTML = "Ver más";
         // Añadimos la informacion a las variables
         nombre.innerHTML = datos.nombre;
-        descripcion.innerHTML = datos.info;
+        info.innerHTML = datos.descripcion;
+        descripcion.appendChild(info);
         valor.innerHTML = "Valor "+datos.valor;
         // Creamos la caja movil
         var cajaMovil = document.createElement("div");
