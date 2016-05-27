@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class ProyectoScrum\Modelo\GestionMySQL | Proyecto Scrum</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-ProyectoScrum.html">
+						ProyectoScrum<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-ProyectoScrum.Controlador.html">
+						Controlador					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-ProyectoScrum.Modelo.html">
+						Modelo					</a>
+
+						</li>
+				<li>
+					<a href="namespace-ProyectoScrum.Vista.html">
+						Vista					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ProyectoScrum.Modelo.conector.html">conector</a></li>
+				<li class="active"><a href="class-ProyectoScrum.Modelo.GestionMySQL.html">GestionMySQL</a></li>
+				<li><a href="class-ProyectoScrum.Modelo.ModeloLogin.html">ModeloLogin</a></li>
+				<li><a href="class-ProyectoScrum.Modelo.ModeloRegistro.html">ModeloRegistro</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ProyectoScrum.Modelo.html" title="Summary of ProyectoScrum\Modelo"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class GestionMySQL</h1>
+
+
+	<div class="description">
+	<p>Metodos sql para la base de datos</p>
+
+<p>Funciones para realizar sentencias sql al servidor</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-ProyectoScrum.html">ProyectoScrum</a>\<a href="namespace-ProyectoScrum.Modelo.html">Modelo</a><br>
+		
+
+				<b>Author:</b>
+				josembarboteo<a href="&#109;a&#105;l&#116;o&#x3a;j&#x6f;&#115;&#x65;&#109;&#x62;&#97;&#x72;&#98;&#x6f;&#116;&#x65;&#111;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">j&#x6f;&#115;&#x65;&#109;&#x62;&#97;&#x72;&#98;&#x6f;&#116;&#x65;&#111;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a><br>
+				<b>Version:</b>
+				0.1<br>
+			<b>Located at</b> GestionMySQL.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="statement" id="_statement">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_statement">#</a>
+		<code>statement( <span>type <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			<p>Ejecucion de sentencias sql</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Ejecucion de sentencias sql</p>
+
+<p>Metodo que realiza la conexion con la base de datos, ejecuta la sentencia sql y devuelve el resultado de la misma</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertar" id="_insertar">
+
+		<td class="attributes"><code>
+			 public 
+
+			type
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertar">#</a>
+		<code>insertar( <span>type <var>$tabla</var></span>, <span>type <var>$datos</var></span> )</code>
+
+		<div class="description short">
+			<p>Metodo de insercion</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Metodo de insercion</p>
+
+<p>Contruye una sentencia sql dependiendo de la tabla que se le introduce, asi mismo calcila la id del dato y lo devuelve junto coon todo el paquete</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tabla</var></dt>
+					<dd></dd>
+					<dt><var>$datos</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					type
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="leer" id="_leer">
+
+		<td class="attributes"><code>
+			 public 
+
+			type
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_leer">#</a>
+		<code>leer( <span>type <var>$tabla</var></span>, <span>type <var>$tipo</var></span> )</code>
+
+		<div class="description short">
+			<p>Metodo de lectura</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Metodo de lectura</p>
+
+<p>Realiza la lectura de una tabla con una restriccion en uno de los campos dependiente de la tabla</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tabla</var></dt>
+					<dd></dd>
+					<dt><var>$tipo</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					type
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="borrar" id="_borrar">
+
+		<td class="attributes"><code>
+			 public 
+
+			type
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_borrar">#</a>
+		<code>borrar( <span>type <var>$tabla</var></span>, <span>type <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Metodo de eliminado</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Metodo de eliminado</p>
+
+<p>Realiza la eliminacion de una de las entradas de ka base de datos</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tabla</var></dt>
+					<dd></dd>
+					<dt><var>$id</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					type
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actualizar" id="_actualizar">
+
+		<td class="attributes"><code>
+			 public 
+
+			type
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actualizar">#</a>
+		<code>actualizar( <span>type <var>$tabla</var></span>, <span>type <var>$datos</var></span> )</code>
+
+		<div class="description short">
+			<p>Metodo de actualizacion</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Metodo de actualizacion</p>
+
+<p>Realiza la modificacion de los datos almacenados en la base de datos</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tabla</var></dt>
+					<dd></dd>
+					<dt><var>$datos</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					type
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="conexion" id="$conexion">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+<var>$conexion</var>
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$conexion" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Proyecto Scrum API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
