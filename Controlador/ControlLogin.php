@@ -27,12 +27,12 @@ $ModeloLogin=new ModeloLogin();
  * Comprueba que los datos son correctos y logea
  */
 
-$valido=$ModeloLogin->comprobarCorreoExistente($correo);
-if ($valido){
-    $valido=$ModeloLogin->comprobarPasswordValida($password);
+$usuario=$ModeloLogin->comprobarCorreoExistente($correo);
+if ($usuario != ""){
+    $valido=$ModeloLogin->comprobarPasswordValida($usuario, $password);
     if($valido){
         //salida a la página de tareas del usuario, como no existe, volvemos a login
-        header('location: ../index.php');
+        header('location: ../Vista/Proyectos.php');
     }
     else{
         $error="PASSWORD NO VALIDA.";

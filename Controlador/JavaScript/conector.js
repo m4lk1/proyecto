@@ -7,7 +7,7 @@ var conexion = { //metodos de conexion, envio y recepcion de datos al servidor
         conexion.callback(objeto);
     },
     enviarDatos : function (paquete) {
-        var url = "http://localhost/proyecto1/EntradaDatos.php";
+        var url = "http://projectscrum.servehttp.com/EntradaDatos.php";
         this.envio(url, paquete);
     },
     envio : function (url, paquete) {

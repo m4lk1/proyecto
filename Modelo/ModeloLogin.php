@@ -2,6 +2,8 @@
 
 namespace ProyectoScrum\Modelo;
 
+use ProyectoScrum\Modelo\GestionMySQL;
+
 /**
  * Clase ModeloLogin.
  * 
@@ -9,6 +11,12 @@ namespace ProyectoScrum\Modelo;
  *  del usuario a logear.
  */
 class ModeloLogin {
+    
+    protected $gestor;
+    
+    public function __construct() {
+        $this->gestor = new GestionMySQL();
+    }
     
     /**
      *Usuario de ejemplo, con contraseña.
@@ -32,11 +40,11 @@ class ModeloLogin {
      */
     
     public function comprobarCorreoExistente($correo){
-        $valido=false;
-        if($correo == $this->usuarioEjemplo){
-        $valido=true;
+        $prueba = $this->gestor->leerUsuario($correo);
+        if($prueba != ""){
+            return $prueba;
         }
-        return $valido;
+        return false;
     }
     
     /**
@@ -49,11 +57,11 @@ class ModeloLogin {
      * @return Validacion.
      */
     
-    public function comprobarPasswordValida($password){
-        $valido=false;
-        if($password == $this->passwordEjemplo){
-        $valido=true;
+    public function comprobarPasswordValida($usuario, $password){
+        $prueba = $this->gestor->leerContrasena($usuario, $password);
+        if($prueba){
+            return $prueba;
         }
-        return $valido;
+        return false;
     }
 }

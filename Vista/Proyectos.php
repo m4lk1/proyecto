@@ -30,7 +30,7 @@
                 </button>
                 <ul class="dropdown-menu btn-block" aria-labelledby="dropdownMenu1" id="proyectos">
                     <!-- espacio reservado para la lectura de proyectos en php !-->
-                    
+                    <li><a href="./Tabla.php">Proyecto 1</a></li>
                 </ul>
             </div>
         </div> 

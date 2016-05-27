@@ -164,4 +164,22 @@ class GestionMySQL {
         }
     }
     
+    public function leerUsuario($email){
+        $sql = "SELECT * FROM Usuarios WHERE email_usuario='".$email."';";
+        $resultado = $this->statement($sql);
+        if($this->conexion->numeroFilas() == 0){
+            return fasle;
+        }else{
+            return $resultado["idUsuarios"];
+        }
+    }
+    public function leerContrasena($id, $pass){
+        $sql = "SELECT password FROM Datos WHERE idUsuarios='".$id."';";
+        $resultado = $this->statement($sql);
+        if($resultado == $pass){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
