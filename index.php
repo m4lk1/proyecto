@@ -26,7 +26,7 @@
                         <input type="checkbox" value="recuerdame"> Recordarme
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" id="conectar">Conectar</button>
+                <button class="btn btn-lg btn-primary btn-block" id="conectar" type="submit" value="enviar" onclick = "location='Controlador/ControlLogin.php'">Conectar</button>
             </div>
             <div class="form-signin">
                 <button id="btnRegistrar" class="btn btn-lg btn-primary btn-block" type="submit" value="enviar" onclick = "location='Vista/Registro.php'">Registrar</button>

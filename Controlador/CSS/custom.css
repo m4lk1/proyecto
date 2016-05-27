@@ -84,6 +84,22 @@ body {
     border-right: 5px #337ab7 solid;
 }
 
+.rellenoSprint{
+    background-color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom: 5px #337ab7 solid;
+    border-left: 5px #337ab7 solid;
+    border-right: 5px #337ab7 solid;
+}
+
 .cajamovil{
     margin: 4px;
     background-color: #EEE;
@@ -114,10 +130,31 @@ body {
     overflow: auto;
 }
 
+.rellenoSprint{
+    height: 500px;
+    overflow: auto;
+}
+
 #btnProyecto{
     padding-top: 30px;
     margin-bottom: 5px;
 }
 #error > p{
     color: red;
+}
+
+#detalles{
+    display: none;
+}
+
+.sprint{
+    margin: 4px;
+    background-color: #EEE;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.sprint:hover{
+    background-color: #bfbfbf;
 }

@@ -9,43 +9,31 @@
     <link href="../Controlador/CSS/bootstrap.min.css" rel="stylesheet" media="screen">
     <!-- CUSTOM CSS -->
     <link href="../Controlador/CSS/custom.css" rel="stylesheet">
+    <link href="../Controlador/CSS/movilidad.css" rel="stylesheet">
+    <link href="../Controlador/CSS/error.css" rel="stylesheet">
  
  
   </head>
   <body>
         <div class="container">
             <div class="row">
-                <div class="col-lg-2">
-                    <div class="cabecera">Backlog</div>
-                    <div class="relleno" id="backlog">
-                        <div class="cajamovil">   
-                            <!-- este espacio es para mantener la estructura de la tabla, no se debe borrar !-->
-                        </div>
-                    </div> 
-                </div>
-                <div class="col-lg-2">
-                    <div class="cabecera" id="sprint">Sprints</div>
-                    <div class="relleno"><!-- Este espacio esta qui para mantener la estructura de la tabla, no se debe borrar !--></div>     
-                </div>
-                <div class="col-lg-2">
-                    <div class="cabecera" id="pendiente">Por hacer</div>
-                    <div class="relleno"><!-- Este espacio esta qui para mantener la estructura de la tabla, no se debe borrar !--></div> 
-                </div>
-                <div class="col-lg-2">
-                    <div class="cabecera" id="proceso">En proceso</div>
-                    <div class="relleno"><!-- Este espacio esta qui para mantener la estructura de la tabla, no se debe borrar !--></div> 
-                </div>
-                <div class="col-lg-2">
-                    <div class="cabecera" id="fin">Hecho</div>
-                    <div class="relleno"><!-- Este espacio esta qui para mantener la estructura de la tabla, no se debe borrar !--></div>
-                </div>
+                <?php
+                error_reporting(E_ALL);
+                ini_set('display_errors', '1');
+                ?>
+                <?php
+                    require './CargarPaginaTabla.php';
+                    use ProyectoScrum\Vista\CargarPaginaTabla;
+                    $mostrar = new CargarPaginaTabla();
+                    $mostrar->cargaInicial();
+                ?>
                 <div class="col-lg-2" id="botonesTabla">
                     <button class="btn btn-lg btn-primary btn-block" type="button" data-toggle="modal" data-target="#popupBtnTabla">Añadir HU</button>
                     <button class="btn btn-lg btn-primary btn-block" type="button" data-toggle="modal" data-target="#popupBtnSprint">Añadir Sprint</button>
                     <button class="btn btn-lg btn-primary btn-block" type="button" id="atras">Atras</button>
                 </div>
               </div>
-        </div> 
+        </div>
         <div id="popupBtnTabla" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -54,13 +42,13 @@
                         <h4 class="modal-title">Añadir HU</h4>
                         <form class="form-signin" action="" method="post">
                             <br />
-                            <div id="error"></div>
+                            <div id="error" class="errorOculto"><p>Hay campos vacios en el formulario</p></div>
                             <label for="nombreHu" class="sr-only">Nombre HU</label>
                             <input type="text" id="nombreHu" class="form-control" name="nombreHu" placeholder="Nombre HU" required autofocus>
                             <label for="valor" class="sr-only">Valor</label>
                             <input type="number" id="valor" class="form-control" name="valor" placeholder="Valor" required>
                             <label for="nick" class="sr-only">Más informacion</label>
-                            <input type="text" class="form-control" placeholder="Campo de texto" id="info">
+                            <input type="text" class="form-control" placeholder="Detalles" id="info">
                             <br />
                         </form>
                         <div class="modal-footer">
@@ -92,12 +80,26 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                        <button type="button" class="btn btn-primary" id="anadirSprint">Guardar</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
        
+        
+        <div id="popupBtnInfo" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" id="btnModificar">Modificar</button>
+                            <button type="button" class="btn btn-default" id="btnEliminar">Eliminar</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal --> 
+        </div>
        
  
         <!-- Librería jQuery requerida por los plugins de JavaScript -->
@@ -110,5 +112,12 @@
     <script src="../Controlador/JavaScript/bootstrap.min.js"></script>
     <script src="../Controlador/JavaScript/custom.js"></script>
     <script src="../Controlador/JavaScript/anadirHU.js"></script>
+    <script src="../Controlador/JavaScript/Movilidad.js"></script>
+    <script src="../Controlador/JavaScript/cambiarEstado.js"></script>
+    <script src="../Controlador/JavaScript/informacion.js"></script>
+    <script src="../Controlador/JavaScript/conector.js"></script>
+    <script src="../Controlador/JavaScript/anadirSprint.js"></script>
+    <script src="../Controlador/JavaScript/controlHU.js"></script>
+    <script src="../Controlador/JavaScript/DragDropTouch.js"></script>
     </body>
 </html>

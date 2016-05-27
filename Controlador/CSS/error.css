@@ -1,4 +1,12 @@
-#Resultado{
+.errorOculto{
+    display: none;
+}
+
+.errorVisible{
+    display: inline;
+}
+
+#error{
     color:red;
     width: 330px;
     text-align: center;

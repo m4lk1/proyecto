@@ -1,6 +1,10 @@
-title: "Proyecto Scrum"
+title: Proyecto Scrum
 source: 
     - ./Controlador
     - ./Vista
     - ./Modelo
-destination: ./doc
+exclude:
+    - ./Test
+    - ./vendor
+destination: doc
+noSourceCode: true
